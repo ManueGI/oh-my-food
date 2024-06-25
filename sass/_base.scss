@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-secondary;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  margin-bottom: $spacing-medium;
+}
+
+.bg-grey {
+  background-color: $background;
+}
+
+.main-container {
+  width: 100%;
+  padding: 0 $padding-mobile;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  // Styles internes pour éviter le dépassement de largeur
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    padding: 0 $padding-desktop;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    max-width: $max-width-container;
+  }
+}
