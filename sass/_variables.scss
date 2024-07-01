@@ -6,19 +6,29 @@ $background: #F6F6F6;
 $light-grey: #ebebeb;
 $dark-grey: #353535;
 
-// gradient
+/* // gradient
 
-$gradient: linear-gradient(to bottom, $secondary-color, $primary-color);
+$gradient: linear-gradient(0deg, $primary-color,  $secondary-color); */
 
 //fonts
 $font-primary: 'Shrikhand', serif;
 $font-secondary: 'Roboto', sans-serif;
 
-// Variables d'espacement
 // Variables de dimension
-$max-width-container: 1200px;
-$padding-mobile: 16px;
-$padding-desktop: 32px;
-$spacing-small: 8px;
-$spacing-medium: 16px;
-$spacing-large: 32px;
+$home-title-size: 24px;
+
+//shadow
+$shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+// Mixin pour le gradient
+@mixin gradient($angle) {
+  $gradient: null;
+  @if $angle == 0deg {
+    $gradient: linear-gradient(0deg, $primary-color, $secondary-color);
+  } @else if $angle == 180deg {
+    $gradient: linear-gradient(180deg, $primary-color, $secondary-color);
+  } @else {
+    @error "Direction de gradient non supportée";
+  }
+  background: $gradient;
+}

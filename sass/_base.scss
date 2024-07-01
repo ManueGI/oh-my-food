@@ -4,6 +4,7 @@
 
 body {
   font-family: $font-secondary;
+  margin: 0;
 }
 
 a {
@@ -11,13 +12,18 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: $home-title-size;
+  margin-bottom: 20px;
+}
+
 li {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.page-title {
   font-family: $font-primary;
-  margin-bottom: $spacing-medium;
+  margin-bottom: 16px;
 }
 
 .bg-grey {
@@ -26,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-container {
   width: 100%;
-  padding: 0 $padding-mobile;
+  max-width: 768px;
   box-sizing: border-box;
   margin: 0 auto;
 
@@ -37,14 +43,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-width: 768px) {
-  .main-container {
-    padding: 0 $padding-desktop;
-  }
-}
 
 @media (min-width: 1024px) {
   .main-container {
-    max-width: $max-width-container;
+    max-width: 1440px;
   }
 }

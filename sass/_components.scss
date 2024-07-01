@@ -5,46 +5,135 @@ header {
 
 
   .logo {
-    width: 100%;
     margin: auto;
     text-align: center;
+
+    img {
+      height: 30px;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: $dark-grey;
+  color: white;
+  padding: 25px;
+  margin: 0;
+
+  img {
+    height: 20px;
+    filter: invert(100%);
+  }
+}
+
+.card {
+  width: 100%;
+  height: 17em;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 15px;
+  color: black;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 66.67%;
+  }
+
+  p {
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 15px;
+}
+
+.card-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+}
+
+.card-relative {
+  position: relative;
+}
+
+.hearts {
+  width: 30px;
+  height: 30px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fa-heart {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 80px;
+  right: 30px;
+}
+
+.empty-heart {
+  z-index: 0;
+}
+
+.filled-heart {
+  @include gradient(180deg);
+  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: scale(0);
+  transform-origin: center;
+  opacity: 0;
+  z-index: 1;
+}
+
+.hearts:active .filled-heart {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+.btn-gradient {
+  @include gradient(0deg);
+  width: 80%;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: $shadow;
+  a {
+    color: white;
+    font-size: 16px;
   }
 }
 
 
-footer {
-  width: 100%;
-}
-
-
-.card {
-  width: 100%;
-  background-color: white;
-  border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.card img {
-  object-fit: cover;
-  width: 100%;
-}
-
-.card-title {
-  font-size: 16px;
-  margin: 0 0 5px 0;
-}
-
-.card-restaurant {
-  background-color: white;
-  border-radius: 20px;
-  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.2));
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  aspect-ratio: 3/2;
-}
-
-.card-restaurant .card-title {
-  margin: 20px;
+@media (min-width: 1024px) {
+  .hearts:hover .filled-heart {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
