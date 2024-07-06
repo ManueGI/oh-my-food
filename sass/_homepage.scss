@@ -34,6 +34,10 @@
 .fonctionnement {
   margin: 30px 15px 30px 25px;
 
+  .fonctionnement-list {
+    width: 100%;
+  }
+
   .box-style {
     display: flex;
     align-items: center;
@@ -72,4 +76,41 @@
 
 .restaurants {
   padding: 30px 15px 30px 15px;
+}
+
+
+
+@media (min-width: 1024px) {
+  .search {
+    .search-bar {
+      box-shadow: none
+    }
+    .title-menu {
+      box-shadow: none;
+    }
+  }
+
+  .fonctionnement {
+    margin: 40px auto 40px auto;
+    max-width: 1024px;
+
+    .fonctionnement-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+  .restaurants {
+    padding: 15px 0 15px 0;
+    .restaurant-content {
+      margin: auto;
+      max-width: 1024px;
+    }
+    .restaurant-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+    }
+  }
 }
