@@ -312,10 +312,6 @@ footer li p {
     gap: 60px;
   }
 }
-.menu {
-  position: relative;
-}
-
 .banner {
   position: relative;
   overflow: hidden;
@@ -348,13 +344,20 @@ footer li p {
 .restaurant-name h1 {
   font-family: "Shrikhand", serif;
   font-size: 28px;
+  margin: 15px 0;
+}
+.restaurant-name .hearts {
+  position: relative;
+  margin-left: 30px;
 }
 .restaurant-name .fa-heart {
   font-size: 30px;
   cursor: pointer;
+}
+.restaurant-name .filled-heart {
   position: absolute;
-  top: 45px;
-  right: 30px;
+  top: 0;
+  right: 0;
 }
 
 .dishes h2 {
@@ -378,6 +381,7 @@ footer li p {
 .dish-card {
   display: flex;
   justify-content: space-between;
+  position: relative;
   background-color: white;
   overflow: hidden;
   position: relative;
@@ -421,25 +425,36 @@ footer li p {
 
 .dish-check {
   color: white;
+  font-size: 25px;
   background-color: #99E2D0;
+  position: absolute;
+  top: 0;
+  right: -60px;
+  height: 100%;
   width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-wrap: nowrap;
-  transition: width 0.3s ease-out;
-  width: 0;
+  transition: transform 0.3s ease-out;
   transform-origin: right;
 }
 
 .dish-card:active .dish-check {
-  width: 60px;
+  transform: translateX(-60px);
 }
 
 .dish-card:active .dish-text {
   width: calc(100% - 60px);
+}
+
+@media (min-width: 1024px) {
+  .restaurant-info {
+    max-width: 634px;
+    margin: auto;
+  }
+  .restaurant-name {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
