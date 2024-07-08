@@ -1,3 +1,4 @@
+
 .banner {
   position: relative;
   overflow: hidden;
@@ -13,12 +14,11 @@
   left: 0;
 }
 
-.restaurant-content {
+.menu .content {
   position: relative;
-  padding: 20px;
-  background-color: #f0f0f0;
   border-radius: 50px 50px 0 0;
   margin-top: -50px;
+  padding: 15px;
   z-index: 1;
 }
 
@@ -52,6 +52,16 @@
 .dishes {
   h2 {
   font-weight: 200;
+  }
+
+  .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    padding: 15px 40px;
   }
 }
 
@@ -150,4 +160,13 @@
  .restaurant-name {
   justify-content: center;
  }
+
+
+.dish-card:hover .dish-check {
+  transform: translateX(-60px);
+}
+
+.dish-card:hover .dish-text {
+  width: calc(100% - 60px);
+}
 }
