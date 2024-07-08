@@ -38,15 +38,12 @@
     width: 100%;
   }
 
-  .box-style {
+  .box-relative {
+    position: relative;
     display: flex;
     align-items: center;
-    position :relative;
-    border-radius: 20px;
-    height: 80px;
-    margin-bottom: 15px;
-    box-shadow: $shadow;
     font-weight: 500;
+  }
 
     i {
       margin: 15px 15px 15px 30px;
@@ -71,16 +68,13 @@
       }
     }
 
-  }
 }
 
 .restaurants {
   padding: 30px 15px 30px 15px;
 }
 
-
-
-@media (min-width: 1024px) {
+@media (min-width: $screen-desktop) {
   .search {
     .search-bar {
       box-shadow: none

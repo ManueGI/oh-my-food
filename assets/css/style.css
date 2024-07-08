@@ -1,6 +1,3 @@
-/* // gradient
-
-$gradient: linear-gradient(0deg, $primary-color,  $secondary-color); */
 * {
   box-sizing: border-box;
 }
@@ -39,10 +36,6 @@ li {
   box-sizing: border-box;
   margin: 0 auto;
 }
-.main-container * {
-  max-width: 100%;
-  box-sizing: border-box;
-}
 
 @media (min-width: 1024px) {
   .main-container {
@@ -60,6 +53,13 @@ header .logo {
 }
 header .logo img {
   height: 30px;
+}
+
+.box-style {
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  min-height: 70px;
 }
 
 footer {
@@ -114,42 +114,38 @@ footer li p {
   margin: 0;
 }
 
-.card-footer {
+.card-relative {
+  position: relative;
+}
+.card-relative .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   padding: 15px;
 }
-
-.card-text {
+.card-relative .card-text {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
-
-.card-title {
+.card-relative .card-title {
   font-size: 18px;
   font-weight: 500;
   margin: 0 0 5px 0;
 }
-
-.card-relative {
-  position: relative;
+.card-relative .fa-heart {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 80px;
+  right: 30px;
 }
 
 .hearts {
   width: 30px;
   height: 30px;
   -webkit-tap-highlight-color: transparent;
-}
-
-.fa-heart {
-  font-size: 30px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 80px;
-  right: 30px;
 }
 
 .empty-heart {
@@ -256,21 +252,17 @@ footer li p {
 .fonctionnement .fonctionnement-list {
   width: 100%;
 }
-.fonctionnement .box-style {
+.fonctionnement .box-relative {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
-  border-radius: 20px;
-  height: 80px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   font-weight: 500;
 }
-.fonctionnement .box-style i {
+.fonctionnement i {
   margin: 15px 15px 15px 30px;
   color: #9356DC;
 }
-.fonctionnement .box-style .pastille {
+.fonctionnement .pastille {
   position: absolute;
   left: -10px;
   top: 30px;
@@ -283,7 +275,7 @@ footer li p {
   justify-content: center;
   align-items: center;
 }
-.fonctionnement .box-style .pastille p {
+.fonctionnement .pastille p {
   margin: 0;
 }
 
@@ -319,6 +311,135 @@ footer li p {
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
+}
+.menu {
+  position: relative;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.restaurant-content {
+  position: relative;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 50px 50px 0 0;
+  margin-top: -50px;
+  z-index: 1;
+}
+
+.restaurant-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant-name h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+}
+.restaurant-name .fa-heart {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 45px;
+  right: 30px;
+}
+
+.dishes h2 {
+  font-weight: 200;
+}
+
+.custom-border {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-border::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.dish-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.dish-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px;
+  width: 100%;
+  transition: width 0.3s ease-out;
+}
+.dish-text .dish-info {
+  overflow: hidden;
+  display: inline;
+}
+.dish-text .dish-info p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish-text p {
+  margin: 5px 0;
+}
+
+.dish-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 200;
+  text-align: right;
+  width: 60px;
+  font-weight: 500;
+  flex-grow: 0;
+}
+
+.dish-check {
+  color: white;
+  background-color: #99E2D0;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  transition: width 0.3s ease-out;
+  width: 0;
+  transform-origin: right;
+}
+
+.dish-card:active .dish-check {
+  width: 60px;
+}
+
+.dish-card:active .dish-text {
+  width: calc(100% - 60px);
 }
 
 /*# sourceMappingURL=style.css.map */

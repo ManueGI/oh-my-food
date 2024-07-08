@@ -35,16 +35,10 @@ li {
   max-width: 768px;
   box-sizing: border-box;
   margin: 0 auto;
-
-  // Styles internes pour éviter le dépassement de largeur
-  * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: $screen-desktop) {
   .main-container {
     max-width: 1440px;
   }
