@@ -37,6 +37,10 @@ li {
   margin: 0 auto;
 }
 
+button {
+  cursor: pointer;
+}
+
 @media (min-width: 1024px) {
   .main-container {
     max-width: 1440px;
@@ -208,20 +212,29 @@ footer li p {
     justify-content: flex-end;
     margin-left: auto;
   }
-  .footer-content ul, .footer-content .footer-links, .footer-content .footer-adm {
+  .footer-content ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     width: 100%;
+  }
+  .footer-content .footer-links, .footer-content .footer-adm {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
   }
-  .footer-content .footer-adm {
-    width: 30%;
-  }
-  .footer-content li {
+  .footer-content a {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    color: white;
     margin-right: 30px;
   }
   .footer-content i {
     margin-right: 10px;
+  }
+  .footer-adm {
+    width: 30%;
   }
 }
 .search {
@@ -318,7 +331,7 @@ footer li p {
 .banner {
   position: relative;
   overflow: hidden;
-  height: 450px;
+  height: 400px;
 }
 
 .banner-image {

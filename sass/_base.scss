@@ -37,6 +37,9 @@ li {
   margin: 0 auto;
 }
 
+button {
+  cursor: pointer;
+}
 
 @media (min-width: $screen-desktop) {
   .main-container {
