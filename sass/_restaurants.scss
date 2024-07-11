@@ -1,8 +1,48 @@
+@mixin dish-card-transitions($total-cards) {
+  .box-style {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform $delay-initial ease;
+  }
+
+  @for $i from 1 through $total-cards {
+    .box-style:nth-of-type(#{$i}) {
+      animation: fadeInUp $delay-initial ease forwards;
+      animation-delay: calc(#{$delay-initial} + (#{$delay-increment} * (#{$i} - 1)));
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu {
+  .content {
+    .restaurant-info {
+      .dishes {
+        &.dishes-9 {
+          @include dish-card-transitions(9);
+        }
+        &.dishes-10{
+          @include dish-card-transitions(10);
+        }
+      }
+    }
+  }
+}
 
 .banner {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 350px;
 }
 
 .banner-image {

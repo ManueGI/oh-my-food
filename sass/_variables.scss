@@ -1,10 +1,11 @@
 //colors
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
 $tertiary-color: #99E2D0;
 $background: #F6F6F6;
 $light-grey: #ebebeb;
 $dark-grey: #353535;
+$spinner-color:  rgba(255, 121, 218, 0.5);
 
 //fonts
 $font-primary: 'Shrikhand', serif;
@@ -16,6 +17,11 @@ $screen-desktop: 1024px;
 
 //shadow
 $shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+$shadow-strong: 0 4px 6px rgba(0, 0, 0, 0.6);
+
+// Variables pour les délais d'animation
+$delay-initial: 0.5s;
+$delay-increment: 0.5s;
 
 // Mixin pour le gradient
 @mixin gradient($angle) {
