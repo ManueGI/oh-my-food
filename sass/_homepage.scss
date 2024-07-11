@@ -45,9 +45,16 @@
 }
 
 @keyframes hideLoader {
-  0% { display: flex; }
-  99% { display: flex; }
-  100% { display: none; }
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none; 
+  }
 }
 
 .search {
