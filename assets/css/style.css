@@ -181,18 +181,6 @@ footer a p {
   right: 30px;
 }
 
-.new {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #99E2D0;
-  border-radius: 2px;
-}
-.new p {
-  color: #008766;
-  margin: 5px 15px;
-}
-
 .empty-heart {
   z-index: 0;
 }
@@ -251,8 +239,7 @@ footer a p {
     justify-content: flex-end;
     width: 100%;
   }
-  .footer-content .footer-links,
-  .footer-content .footer-adm {
+  .footer-content .footer-links, .footer-content .footer-adm {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
