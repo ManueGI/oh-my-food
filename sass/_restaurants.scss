@@ -2,13 +2,13 @@
   .box-style {
     opacity: 0;
     transform: translateY(20px);
-    transition: transform $delay-initial ease;
+    transition: transform 0.5s ease;
   }
 
   @for $i from 1 through $total-cards {
     .box-style:nth-of-type(#{$i}) {
-      animation: fadeInUp $delay-initial ease forwards;
-      animation-delay: calc(#{$delay-initial} + (#{$delay-increment} * (#{$i} - 1)));
+      animation: fadeInUp 0.5s ease forwards;
+      animation-delay: calc(#{0.5s} + (#{0.5s} * (#{$i} - 1)));
     }
   }
 }
@@ -32,7 +32,7 @@
         &.dishes-9 {
           @include dish-card-transitions(9);
         }
-        &.dishes-10{
+        &.dishes-10 {
           @include dish-card-transitions(10);
         }
       }
@@ -78,21 +78,22 @@
     position: relative;
     margin-left: 30px;
   }
+
   .fa-heart {
     font-size: 30px;
     cursor: pointer;
   }
+
   .filled-heart {
     position: absolute;
-  top: 0;
-  right: 0;
+    top: 0;
+    right: 0;
   }
 }
 
-
 .dishes {
   h2 {
-  font-weight: 200;
+    font-weight: 200;
   }
 
   .order {
@@ -112,7 +113,7 @@
 }
 
 .custom-border::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -140,7 +141,7 @@
   .dish-info {
     overflow: hidden;
     display: inline;
-    p{
+    p {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -149,7 +150,6 @@
   p {
     margin: 5px 0;
   }
-
 }
 
 .dish-name {
@@ -182,7 +182,6 @@
   transform-origin: right;
 }
 
-
 .dish-card:active .dish-check {
   transform: translateX(-60px);
 }
@@ -191,23 +190,21 @@
   width: calc(100% - 60px);
 }
 
-
 @media (min-width: $screen-desktop) {
- .restaurant-info {
-  max-width: 634px;
-  margin: auto;
- }
+  .restaurant-info {
+    max-width: 634px;
+    margin: auto;
+  }
 
- .restaurant-name {
-  justify-content: center;
- }
+  .restaurant-name {
+    justify-content: center;
+  }
 
+  .dish-card:hover .dish-check {
+    transform: translateX(-60px);
+  }
 
-.dish-card:hover .dish-check {
-  transform: translateX(-60px);
-}
-
-.dish-card:hover .dish-text {
-  width: calc(100% - 60px);
-}
+  .dish-card:hover .dish-text {
+    width: calc(100% - 60px);
+  }
 }
