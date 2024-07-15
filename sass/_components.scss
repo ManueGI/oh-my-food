@@ -124,6 +124,18 @@ footer {
 
 }
 
+.new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: $tertiary-color;
+  border-radius: 2px;
+  p {
+    color: $dark-green;
+    margin: 5px 15px;
+  }
+}
+
 .empty-heart {
   z-index: 0;
 }
