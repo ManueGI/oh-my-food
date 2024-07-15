@@ -251,7 +251,8 @@ footer a p {
     justify-content: flex-end;
     width: 100%;
   }
-  .footer-content .footer-links, .footer-content .footer-adm {
+  .footer-content .footer-links,
+  .footer-content .footer-adm {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -289,15 +290,12 @@ footer a p {
   height: 48px;
   border: 3px solid #ff79da;
   border-radius: 50%;
-  display: inline-block;
   position: relative;
-  box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
 
 .spinner::after {
   content: "";
-  box-sizing: border-box;
   position: absolute;
   left: 0;
   top: 0;
@@ -333,7 +331,7 @@ footer a p {
   width: 100%;
   text-align: center;
 }
-.search .search-bar {
+.search .search-bar__content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,10 +340,10 @@ footer a p {
   background-color: #ebebeb;
   box-shadow: inset 0 4px 6px -5px rgba(0, 0, 0, 0.4);
 }
-.search i {
+.search .search-bar i {
   margin-right: 10px;
 }
-.search input {
+.search .search-bar input {
   font-size: 18px;
   font-weight: 300;
   background-color: #ebebeb;
@@ -359,7 +357,7 @@ footer a p {
 .search .title-menu h1 {
   font-size: 24px;
   text-align: center;
-  margin: 10px 30px 10px 30px;
+  margin: 10px 30px;
 }
 .search .title-menu p {
   font-size: 18px;
@@ -378,11 +376,11 @@ footer a p {
   align-items: center;
   font-weight: 500;
 }
-.fonctionnement i {
+.fonctionnement .box-relative i {
   margin: 15px 15px 15px 30px;
   color: #9356dc;
 }
-.fonctionnement .pastille {
+.fonctionnement .box-relative .pastille {
   position: absolute;
   left: -13px;
   top: 23px;
@@ -395,37 +393,37 @@ footer a p {
   justify-content: center;
   align-items: center;
 }
-.fonctionnement .pastille p {
+.fonctionnement .box-relative .pastille p {
   margin: 0;
 }
 
 .restaurants {
-  padding: 30px 15px 30px 15px;
+  padding: 30px 15px;
+}
+@media (min-width: 1024px) {
+  .restaurants {
+    padding: 15px 0;
+  }
+  .restaurants .restaurant-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
 }
 
 @media (min-width: 1024px) {
-  .search .search-bar {
-    box-shadow: none;
-  }
+  .search .search-bar,
   .search .title-menu {
     box-shadow: none;
   }
   .fonctionnement {
-    margin: 40px auto 40px auto;
+    margin: 40px auto;
     max-width: 1024px;
   }
   .fonctionnement .fonctionnement-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-  }
-  .restaurants {
-    padding: 15px 0 15px 0;
-  }
-  .restaurants .restaurant-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
   }
 }
 @keyframes fadeInUp {

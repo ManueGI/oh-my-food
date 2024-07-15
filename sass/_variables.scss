@@ -20,10 +20,6 @@ $screen-desktop: 1024px;
 $shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 $shadow-strong: 0 4px 6px rgba(0, 0, 0, 0.6);
 
-// Variables pour les délais d'animation
-$delay-initial: 0.5s;
-$delay-increment: 0.5s;
-
 // Mixin pour le gradient
 @mixin gradient($angle) {
   $gradient: null;

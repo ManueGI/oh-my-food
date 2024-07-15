@@ -91,7 +91,6 @@ footer {
   }
 }
 
-
 .card-relative {
   position: relative;
   .card-footer {
@@ -121,7 +120,6 @@ footer {
     bottom: 30px;
     right: 30px;
   }
-
 }
 
 .new {
@@ -166,9 +164,7 @@ footer {
   color: white;
   font-size: 16px;
   font-weight: 600;
-
 }
-
 
 @media (min-width: $screen-desktop) {
   .hearts:hover .filled-heart {
@@ -200,7 +196,8 @@ footer {
       width: 100%;
     }
 
-    .footer-links, .footer-adm {
+    .footer-links,
+    .footer-adm {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
@@ -212,13 +209,13 @@ footer {
       white-space: nowrap;
       color: white;
       margin-right: 30px;
-      }
-      i {
-        margin-right: 10px;
-      }
     }
+    i {
+      margin-right: 10px;
+    }
+  }
 
-    .footer-adm {
-      width: 30%;
-    }
+  .footer-adm {
+    width: 30%;
+  }
 }
